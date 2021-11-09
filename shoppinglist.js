@@ -26,6 +26,7 @@ function createListElement() {
     var li = document.createElement("li");
     li.appendChild(document.createTextNode(input.value));
     ul.appendChild(li);
+    updateLi()
     input.value = "";
 }
 
@@ -52,11 +53,13 @@ for (let i = 0; i < li.length; i++) {
 }
 
 
+//this now just reruns the top code - It gets the new list with the added item, and applies an event listener to the last added item
 
 function updateLi() {
-    if (createListElement === true) {
-        lineThroughList();
-    }
+    const ul = document.querySelector("ul");
+    const li = ul.children;
+    // so li.length-1 refers to the index of the last item in the li array
+    li[li.length-1].addEventListener('click', lineThroughList)
 };
 
 button.addEventListener("click", addListAfterClick);
