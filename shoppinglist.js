@@ -3,18 +3,19 @@ var input = document.getElementById("userInput");
 var ul = document.querySelector("ul");
 var li = ul.children;
 var done = document.getElementById("done");
+var remove = document.getElementsByClassName("remove")
 
-// ul.addEventListener("click", function () {
-//     for (let i = 0; i < li.length; index++) {
-//         ul.classList.toggle("done");
+function clearFromList() {
+    if (remove.onclick === true) {
+        console.log("This remove thing works.")
+    }
+}
 
-//     }
-// })
+function lineThroughList(){
+	this.classList.toggle("done");
+}
 
 
-ul.addEventListener("click", function () {
-    ul.classList.toggle("done");
-})
 
 function inputLength() {
     return input.value.length;
@@ -41,24 +42,22 @@ function addListAfterKeypress(event) {
     }
 }
 
-function taskDone(i) {
-    if (li[i].className !== "done") {
-        li[i].classList.add("done");
-        for (var i = 0; i < li.length; i++) {
-            li[i].addEventListener("click", taskDone(i));
-        }
-    } else {
-        li[i].classList.toggle("done");
-        for (var i = 0; i < li.length; i++) {
-            li[i].addEventListener("click", taskDone(i));
-        }
-    }
+
+
+
+for (let i = 0; i < li.length; i++) {
+    li[i].addEventListener('click', lineThroughList)
+    // console.log(li[i]) --- testing to see if it works.
+
 }
 
 
 
-
-
+function updateLi {
+    if createListElement() {
+        createListElement.addclasstothis
+    }
+}
 
 button.addEventListener("click", addListAfterClick);
 
@@ -68,7 +67,10 @@ input.addEventListener("keypress", addListAfterKeypress);
 
 
 
+// add addclass to the  new element function //
 
+
+// you could now add a function that updates the li array so that you are able to linethrough added items to the list
 
 
 /*1. If you click on the list item, it toggles the .done  class on and off.

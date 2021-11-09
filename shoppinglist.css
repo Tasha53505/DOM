@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap');
+* {
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
 .coolTitle {
     text-align: center;
     font-family: 'Oswald', Helvetica, sans-serif;
@@ -21,4 +26,45 @@
 
   .done{
       text-decoration: line-through;
+  }
+
+
+ h1 {
+    margin:auto;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: grid;
+      justify-content: center;
+      grid-template-columns: auto, minmax(450px, 2fr);
+      text-decoration: underline;
+ }
+
+  .items {
+      margin:auto;
+      display: grid;
+      justify-content: center;
+      background-color: rgb(255, 255, 189);
+      grid-template-columns: auto, minmax(450px, 1fr);
+      font-family: 'Roboto Condensed', sans-serif;
+  }
+
+  .container {
+      padding: 2px;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: auto, minmax(250px, 1fr);
+      background-repeat: no-repeat;
+      background-position: center;
+
+  }
+
+
+
+  #first {
+      justify-content: center;
+      text-align: center;
+  }
+
+  #userInput {
+    justify-content: center;
+    text-align: center;
   }
