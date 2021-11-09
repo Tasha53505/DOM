@@ -11,8 +11,8 @@ function clearFromList() {
     }
 }
 
-function lineThroughList(){
-	this.classList.toggle("done");
+function lineThroughList() {
+    this.classList.toggle("done");
 }
 
 
@@ -53,11 +53,11 @@ for (let i = 0; i < li.length; i++) {
 
 
 
-function updateLi {
-    if createListElement() {
-        createListElement.addclasstothis
+function updateLi() {
+    if (createListElement === true) {
+        lineThroughList();
     }
-}
+};
 
 button.addEventListener("click", addListAfterClick);
 
